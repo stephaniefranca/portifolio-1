@@ -1,0 +1,355 @@
+/* Estilos Globais */
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f0f8ff;
+    font-size: 18px; /* Ajustado para ser mais legível */
+}
+
+/* Header */
+header {
+    background-color: #4da6ff;
+    color: #ffffff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    font-size: 18px; /* Ajustado para melhor visualização em telas menores */
+    gap: 0.5rem;
+}
+
+.nav-links li {
+    margin-left: 1rem;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Seções */
+.section {
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Cores de fundo para as seções */
+#home { background-color: #e6f2ff; }
+#sobre { background-color: #ccebff; }
+#habilidades { background-color: #b3e0ff; }
+#projetos { background-color: #99d6ff; }
+#contato { background-color: #80ccff; }
+
+/* Títulos */
+h1, h2 {
+    margin-bottom: 5rem;
+    color: #0066cc;
+}
+
+h1 {
+    font-size: 4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+/* Sobre - Conteúdo */
+.sobre-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Adiciona flex-wrap para telas menores */
+}
+
+.photo { 
+    width: 250px; 
+    height: 250px; 
+}
+
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Projetos */
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projeto {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(33.333% - 20px); /* Ajuste para 3 colunas com espaço */
+    min-width: 250px; /* Largura mínima para telas menores */
+    box-sizing: border-box;
+}
+
+.projeto img {
+    width: 100%;
+    height: 200px; /* Altura fixa para todas as imagens */
+    object-fit: cover;
+}
+
+.projeto-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto h3 {
+    margin-bottom: 0.5rem;
+}
+
+.projeto p {
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
+.btn-projeto {
+    display: inline-block;
+    background-color: #4da6ff;
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    align-self: center;
+}
+
+/* Habilidades */
+.habilidade {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.barra-progresso {
+    width: 70%;
+    background-color: #ffffff;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.progresso {
+    height: 100%;
+    background-color: #4da6ff;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/* Links Sociais */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-links a {
+    font-size: 3rem;
+    color: #0066cc;
+}
+
+/* Formulário */
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #b3e0ff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #333333;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #4da6ff;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #3399ff;
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #4da6ff;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 0;
+    }
+
+    .section {
+        padding: 4rem 1rem;
+    }
+
+    .sobre-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .barra-progresso {
+        width: 60%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .projeto {
+        width: calc(50% - 20px); /* 2 colunas para telas médias */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 3rem 1rem;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .barra-progresso {
+        width: 50%;
+    }
+
+    .projeto {
+        width: 100%; /* Largura total para telas pequenas */
+    }
+}
+
+/* Estilos para o menu hambúrguer */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Exibe o menu hambúrguer em telas menores */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #4da6ff;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+    }
+}
+
+
