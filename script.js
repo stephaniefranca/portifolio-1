@@ -40,3 +40,5 @@ navLinks.querySelectorAll('a').forEach(anchor => {
         navLinks.classList.remove('active');
     });
 });
+
+

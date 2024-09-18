@@ -63,6 +63,20 @@ nav a {
     cursor: pointer;
 }
 
+.download-link {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+
+}
+
+.download-link:hover {
+    background-color: #3399ff;
+}
 /* Seções */
 .section {
     padding: 6rem 2rem;
