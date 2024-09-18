@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
     color: #333333;
     background-color: #f0f8ff;
-    font-size: 18px; /* Ajustado para ser mais legível */
+    font-size: 25px; /* Ajustado para ser mais legível */
 }
 
 /* Header */
@@ -35,20 +35,21 @@ nav {
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 27px;
     font-weight: bold;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    font-size: 18px; /* Ajustado para melhor visualização em telas menores */
+    font-size: 25px; /* Ajustado para melhor visualização em telas menores */
     gap: 0.5rem;
 }
 
 .nav-links li {
     margin-left: 1rem;
 }
+
 
 nav a {
     color: #ffffff;
@@ -235,7 +236,7 @@ button:hover {
 /* Estilos Responsivos */
 @media screen and (max-width: 768px) {
     body {
-        font-size: 16px;
+        font-size: 25px;
     }
 
     .menu-toggle {
@@ -289,7 +290,7 @@ button:hover {
 
 @media screen and (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 20px;
     }
 
     .section {
