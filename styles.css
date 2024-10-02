@@ -63,20 +63,28 @@ nav a {
     cursor: pointer;
 }
 
-.download-link {
+.btn-container {
     display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    margin-top: 2rem; /* Espaço acima do botão */
+}
+
+.download-link {
+    display: inline-block;
     padding: 10px 20px;
     background-color: #0066cc;
     color: #ffffff;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-
+    transition: background-color 0.3s;
 }
 
 .download-link:hover {
     background-color: #3399ff;
 }
+
+
 /* Seções */
 .section {
     padding: 6rem 2rem;
@@ -135,46 +143,56 @@ h2 {
 }
 
 /* Projetos */
+/* Projetos */
+#projetos {
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #99d6ff;
+}
+
 .card {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .projeto {
     background-color: #ffffff;
     padding: 1.5rem;
-    margin-bottom: 2rem;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: calc(33.333% - 20px); /* Ajuste para 3 colunas com espaço */
-    min-width: 250px; /* Largura mínima para telas menores */
+    width: calc(33.333% - 2rem);
+    min-width: 250px;
+    max-width: 350px;
     box-sizing: border-box;
 }
 
 .projeto img {
     width: 100%;
-    height: 200px; /* Altura fixa para todas as imagens */
+    height: 200px;
     object-fit: cover;
-}
-
-.projeto-info {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+    border-radius: 5px;
+    margin-bottom: 1rem;
 }
 
 .projeto h3 {
     margin-bottom: 0.5rem;
+    text-align: center;
 }
 
 .projeto p {
     flex-grow: 1;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 .btn-projeto {
@@ -184,7 +202,46 @@ h2 {
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
-    align-self: center;
+    transition: background-color 0.3s;
+}
+
+.btn-projeto:hover {
+    background-color: #3399ff;
+}
+
+.download-link {
+    margin-top: 2rem;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.download-link:hover {
+    background-color: #3399ff;
+}
+
+/* Estilos Responsivos */
+@media screen and (max-width: 1024px) {
+    .projeto {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .projeto {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .projeto {
+        width: 100%;
+    }
 }
 
 /* Habilidades */
@@ -224,32 +281,6 @@ h2 {
     color: #0066cc;
 }
 
-/* Formulário */
-input, textarea {
-    margin-bottom: 1rem;
-    padding: 0.5rem;
-    border: 1px solid #b3e0ff;
-    border-radius: 5px;
-    background-color: #ffffff;
-    color: #333333;
-    font-size: 1rem;
-}
-
-button {
-    background-color: #4da6ff;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
-}
-
-button:hover {
-    background-color: #3399ff;
-}
 
 /* Estilos Responsivos */
 @media screen and (max-width: 768px) {
@@ -370,5 +401,7 @@ button:hover {
         font-size: 1.5rem;
     }
 }
+
+
 
 
